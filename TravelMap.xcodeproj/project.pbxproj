@@ -54,14 +54,38 @@
 		1D5947CF1E6149EB00E1EBD5 /* TravelMap */ = {
 			isa = PBXGroup;
 			children = (
+				1D5947E41E6150B900E1EBD5 /* Controller */,
+				1D5947E31E6150B400E1EBD5 /* View */,
+				1D5947E21E6150AE00E1EBD5 /* Model */,
 				1D5947D01E6149EB00E1EBD5 /* AppDelegate.swift */,
-				1D5947D21E6149EB00E1EBD5 /* ViewController.swift */,
 				1D5947D41E6149EB00E1EBD5 /* Main.storyboard */,
 				1D5947D71E6149EB00E1EBD5 /* Assets.xcassets */,
 				1D5947D91E6149EB00E1EBD5 /* LaunchScreen.storyboard */,
 				1D5947DC1E6149EB00E1EBD5 /* Info.plist */,
 			);
 			path = TravelMap;
+			sourceTree = "<group>";
+		};
+		1D5947E21E6150AE00E1EBD5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1D5947E31E6150B400E1EBD5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1D5947E41E6150B900E1EBD5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1D5947D21E6149EB00E1EBD5 /* ViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +326,7 @@
 				1D5947E11E6149EB00E1EBD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
