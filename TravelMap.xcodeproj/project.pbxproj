@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		1D5947D11E6149EB00E1EBD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5947D01E6149EB00E1EBD5 /* AppDelegate.swift */; };
-		1D5947D31E6149EB00E1EBD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5947D21E6149EB00E1EBD5 /* ViewController.swift */; };
+		1D5947D31E6149EB00E1EBD5 /* TravelDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5947D21E6149EB00E1EBD5 /* TravelDetailsViewController.swift */; };
 		1D5947D61E6149EB00E1EBD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D5947D41E6149EB00E1EBD5 /* Main.storyboard */; };
 		1D5947D81E6149EB00E1EBD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D5947D71E6149EB00E1EBD5 /* Assets.xcassets */; };
 		1D5947DB1E6149EB00E1EBD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D5947D91E6149EB00E1EBD5 /* LaunchScreen.storyboard */; };
+		1D5947E61E6155B300E1EBD5 /* TravelSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5947E51E6155B300E1EBD5 /* TravelSetupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D5947CD1E6149EB00E1EBD5 /* TravelMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D5947D01E6149EB00E1EBD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1D5947D21E6149EB00E1EBD5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1D5947D21E6149EB00E1EBD5 /* TravelDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDetailsViewController.swift; sourceTree = "<group>"; };
 		1D5947D51E6149EB00E1EBD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1D5947D71E6149EB00E1EBD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D5947DA1E6149EB00E1EBD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D5947DC1E6149EB00E1EBD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D5947E51E6155B300E1EBD5 /* TravelSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelSetupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,6 @@
 				1D5947E31E6150B400E1EBD5 /* View */,
 				1D5947E21E6150AE00E1EBD5 /* Model */,
 				1D5947D01E6149EB00E1EBD5 /* AppDelegate.swift */,
-				1D5947D41E6149EB00E1EBD5 /* Main.storyboard */,
 				1D5947D71E6149EB00E1EBD5 /* Assets.xcassets */,
 				1D5947D91E6149EB00E1EBD5 /* LaunchScreen.storyboard */,
 				1D5947DC1E6149EB00E1EBD5 /* Info.plist */,
@@ -76,6 +77,7 @@
 		1D5947E31E6150B400E1EBD5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1D5947D41E6149EB00E1EBD5 /* Main.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -83,7 +85,8 @@
 		1D5947E41E6150B900E1EBD5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1D5947D21E6149EB00E1EBD5 /* ViewController.swift */,
+				1D5947E51E6155B300E1EBD5 /* TravelSetupViewController.swift */,
+				1D5947D21E6149EB00E1EBD5 /* TravelDetailsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -161,7 +164,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D5947D31E6149EB00E1EBD5 /* ViewController.swift in Sources */,
+				1D5947E61E6155B300E1EBD5 /* TravelSetupViewController.swift in Sources */,
+				1D5947D31E6149EB00E1EBD5 /* TravelDetailsViewController.swift in Sources */,
 				1D5947D11E6149EB00E1EBD5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TravelDetailsViewController.swift
 //  TravelMap
 //
 //  Created by Header-Develop on 2/25/2560 BE.
@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController {
+class TravelDetailsViewController: UIViewController {
     
     
     @IBOutlet weak var myMapOUTLET :MKMapView!
