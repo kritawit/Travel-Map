@@ -17,12 +17,23 @@ class TravelSetupViewController: UIViewController {
     @IBOutlet weak var btnSubmitOUTLET: UIButton!
 
 
+
     override func viewDidLoad() {
 
     }
 
-    @IBAction func unwindChooseNewTripACTION(usingSeque: UIStoryboardSegue){
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationViewController = segue.destination as! TravelDetailsViewController
+
+        destinationViewController.travelSource = txtTravleSource.text
+        destinationViewController.travelDestination = txtTravelDestination.text
+
+    }
+
+    @IBAction func unwindChooseNewTripACTION(usingSeque: UIStoryboardSegue) {
+
+
+
     }
 
 
