@@ -22,23 +22,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kre-hY-Kg2">
-                                <rect key="frame" x="16" y="28" width="343" height="515"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kre-hY-Kg2">
+                                <rect key="frame" x="16" y="28" width="343" height="537"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="515" id="eoQ-SL-yuP"/>
+                                    <constraint firstAttribute="height" constant="537" id="F23-Dq-eN5"/>
                                 </constraints>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vf-Po-P0l">
-                                <rect key="frame" x="16" y="551" width="343" height="50"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Sj9-Jy-NSP"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="20"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlN-FS-0d8">
                                 <rect key="frame" x="16" y="609" width="343" height="38"/>
                                 <color key="backgroundColor" red="1" green="0.03003166095" blue="0.30810309930000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -53,6 +43,36 @@
                                     <segue destination="Axh-5S-ZXf" kind="unwind" unwindAction="unwindChooseNewTripACTIONUsingSeque:" id="Gcd-Cx-Vaw"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Rmv-HA-7fS">
+                                <rect key="frame" x="16" y="573" width="343" height="28"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vf-Po-P0l">
+                                        <rect key="frame" x="0.0" y="0.0" width="217" height="28"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="hm8-CN-XFU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="20"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zyL-YR-cru">
+                                        <rect key="frame" x="222" y="0.0" width="121" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="121" id="AzL-gJ-3Rd"/>
+                                            <constraint firstAttribute="height" constant="28" id="tzd-YX-Cj0"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Km"/>
+                                            <segment title="Miles"/>
+                                        </segments>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="yCT-bF-Qxo"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -60,24 +80,25 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qlN-FS-0d8" secondAttribute="bottom" constant="20" id="4bQ-T2-p3W"/>
                             <constraint firstItem="kre-hY-Kg2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="B7j-rf-Aqh"/>
                             <constraint firstItem="kre-hY-Kg2" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Emi-8c-ObR"/>
-                            <constraint firstItem="1vf-Po-P0l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="K0Z-Uq-qSG"/>
-                            <constraint firstItem="1vf-Po-P0l" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="PcE-Tk-xCD"/>
-                            <constraint firstItem="qlN-FS-0d8" firstAttribute="top" secondItem="1vf-Po-P0l" secondAttribute="bottom" constant="8" id="bpe-qc-ymC"/>
+                            <constraint firstItem="qlN-FS-0d8" firstAttribute="top" secondItem="Rmv-HA-7fS" secondAttribute="bottom" constant="8" id="Xq4-Oy-2vW"/>
                             <constraint firstItem="qlN-FS-0d8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="cVO-Vl-Apj"/>
-                            <constraint firstItem="1vf-Po-P0l" firstAttribute="top" secondItem="kre-hY-Kg2" secondAttribute="bottom" constant="8" id="dtH-WS-Lhp"/>
+                            <constraint firstItem="Rmv-HA-7fS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="e5a-Oe-yXw"/>
                             <constraint firstItem="qlN-FS-0d8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hDo-Jt-jlU"/>
+                            <constraint firstItem="Rmv-HA-7fS" firstAttribute="top" secondItem="kre-hY-Kg2" secondAttribute="bottom" constant="8" id="ig8-n6-upl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rmv-HA-7fS" secondAttribute="trailing" id="rmP-dP-9nY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btnUnwindOUTLET" destination="qlN-FS-0d8" id="eoj-pX-du2"/>
                         <outlet property="lblInfoOUTLET" destination="1vf-Po-P0l" id="yVJ-Kx-v0C"/>
                         <outlet property="myMapOUTLET" destination="kre-hY-Kg2" id="Z9S-nb-mfa"/>
+                        <outlet property="segmentedOUTLET" destination="zyL-YR-cru" id="X5V-Pg-lVW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="Axh-5S-ZXf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="663" y="139"/>
+            <point key="canvasLocation" x="661.60000000000002" y="138.98050974512745"/>
         </scene>
         <!--Travel Setup View Controller-->
         <scene sceneID="vkE-cQ-OXx">
